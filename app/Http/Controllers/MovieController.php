@@ -13,4 +13,10 @@ class MovieController extends Controller
         $movies = Movie::all();
         return view('movies.index', compact('movies')); //view return the blade file
     }
+
+    public function show($id)
+    {
+        $movie = Movie::find($id);
+        return view('movies.show', compact('movie'));
+    }
 }
