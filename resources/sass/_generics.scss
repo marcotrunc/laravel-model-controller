@@ -1,0 +1,23 @@
+header{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    border-bottom: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 10px #198754;
+    background-color: #000;
+}
+
+main{
+    padding-top: 100px;
+}
+main .card{
+    border: 3px solid #198754;
+}
+main a{
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #198754 ;
+    color: #fff;
+}

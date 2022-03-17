@@ -8,16 +8,12 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}" type="text/css" />
 </head>
 <body>
-    <header>
 
-    </header>
+  @include('layouts.header')
 
-   
-        @yield('content')
+  @yield('content')
 
 
-    <footer></footer>
-
-    <script src="{{asset('js/app.js')}}"></script>
+  <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

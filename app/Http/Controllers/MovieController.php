@@ -8,11 +8,24 @@ use  App\Models\Movie;
 
 class MovieController extends Controller
 {
-    public function index()
+    public function index(Request $req)
     {
-        $movies = Movie::all();
+        $search = $req->input('search');
+
+        $films = Movie::all();
+        $movies = $films;
+        foreach ($films as $film) {
+            if ($film->title == $search) {
+                $movies = [];
+                $movies[] = $film;
+                $search = '';
+            }
+        }
+
         return view('movies.index', compact('movies')); //view return the blade file
     }
+
+
 
     public function show($id)
     {
